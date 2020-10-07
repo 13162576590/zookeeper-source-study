@@ -934,5 +934,5 @@ DataTree.setData()
 
 Watcher时序图
 
-![Watcher时序图](/Users/chenyouhong/Desktop/study/zookeeper-source-study/Watcher时序图.png)
+![Watcher时序图](./Watcher时序图.png)
 
