@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zookeeper顺序一致性</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/zookeeper_____/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/zookeeper_____/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u0" class="ax_default box_1">
+        <div id="u0_div" class=""></div>
+        <div id="u0_text" class="text ">
+          <p><span>follower</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u1" class="ax_default box_1">
+        <div id="u1_div" class=""></div>
+        <div id="u1_text" class="text ">
+          <p><span>follower</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u2" class="ax_default box_1">
+        <div id="u2_div" class=""></div>
+        <div id="u2_text" class="text ">
+          <p><span>leader</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u3" class="ax_default line">
+        <img id="u3_img" class="img " src="images/zookeeper_____/u3.svg"/>
+        <div id="u3_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u4" class="ax_default line">
+        <img id="u4_img" class="img " src="images/zookeeper_____/u3.svg"/>
+        <div id="u4_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u5" class="ax_default line">
+        <img id="u5_img" class="img " src="images/zookeeper_____/u3.svg"/>
+        <div id="u5_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u6" class="ax_default box_1">
+        <div id="u6_div" class=""></div>
+        <div id="u6_text" class="text ">
+          <p><span>clientA</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u7" class="ax_default line">
+        <img id="u7_img" class="img " src="images/zookeeper_____/u3.svg"/>
+        <div id="u7_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u8" class="ax_default box_1">
+        <div id="u8_div" class=""></div>
+        <div id="u8_text" class="text ">
+          <p><span>clientB</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u9" class="ax_default line">
+        <img id="u9_img" class="img " src="images/zookeeper_____/u3.svg"/>
+        <div id="u9_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u10" class="ax_default box_1">
+        <div id="u10_div" class=""></div>
+        <div id="u10_text" class="text ">
+          <p><span>clientC</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u11" class="ax_default line">
+        <img id="u11_img" class="img " src="images/zookeeper_____/u3.svg"/>
+        <div id="u11_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u12" class="ax_default button">
+        <div id="u12_div" class=""></div>
+        <div id="u12_text" class="text ">
+          <p><span style="font-family:'ArialMT', 'Arial', sans-serif;">x: 0 —</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">&gt;</span><span style="font-family:'ArialMT', 'Arial', sans-serif;"> 1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u13" class="ax_default button">
+        <div id="u13_div" class=""></div>
+        <div id="u13_text" class="text ">
+          <p><span style="font-family:'ArialMT', 'Arial', sans-serif;">x: 0 —</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">&gt;</span><span style="font-family:'ArialMT', 'Arial', sans-serif;"> 1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u14" class="ax_default button">
+        <div id="u14_div" class=""></div>
+        <div id="u14_text" class="text ">
+          <p><span style="font-family:'ArialMT', 'Arial', sans-serif;">x: 0 —</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">&gt;</span><span style="font-family:'ArialMT', 'Arial', sans-serif;"> 1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u15" class="compound ax_default line" data-height="193" data-width="1" CompoundMode="true">
+        <img id="u15_img" class="singleImg img " src="images/zookeeper_____/u15.svg"/>
+        <div id="u15p000" class="ax_vector_shape" WidgetTopLeftX="-0.48987908917037" WidgetTopLeftY="0.250870304142486" WidgetTopRightX="-0.489905531242783" WidgetTopRightY="0.0842059217229594" WidgetBottomLeftX="0.484855026192278" WidgetBottomLeftY="0.0824607449437072" WidgetBottomRightX="0.484828584119865" WidgetBottomRightY="-0.084203637475819">
+          <img id="u15p000_img" class="img " src="images/zookeeper_____/u15p000.svg"/>
+        </div>
+        <div id="u15p001" class="ax_vector_shape" WidgetTopLeftX="-0.166502485655554" WidgetTopLeftY="0.0252610912427457" WidgetTopRightX="-0.166720632752961" WidgetTopRightY="-0.0247382234831122" WidgetBottomLeftX="7.87505396608629" WidgetBottomLeftY="-0.0252617765168878" WidgetBottomRightX="7.87483581898889" WidgetBottomRightY="-0.0752610912427457">
+          <img id="u15p001_img" class="img " src="images/zookeeper_____/u15p001.svg"/>
+        </div>
+        <div id="u15p002" class="ax_vector_shape" WidgetTopLeftX="-0.626305456213728" WidgetTopLeftY="-48.4990149139333" WidgetTopRightX="-0.376308882584439" WidgetTopRightY="-48.5003237965178" WidgetBottomLeftX="-0.373691117415561" WidgetBottomLeftY="-0.249676203482238" WidgetBottomRightX="-0.123694543786272" WidgetBottomRightY="-0.250985086066677">
+          <img id="u15p002_img" class="img " src="images/zookeeper_____/u15p002.svg"/>
+        </div>
+        <div id="u15_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u16" class="compound ax_default line" data-height="194" data-width="1" CompoundMode="true">
+        <img id="u16_img" class="singleImg img " src="images/zookeeper_____/u16.svg"/>
+        <div id="u16p000" class="ax_vector_shape" WidgetTopLeftX="-0.485" WidgetTopLeftY="0" WidgetTopRightX="-0.485" WidgetTopRightY="-0.166666666666667" WidgetBottomLeftX="0.485" WidgetBottomLeftY="0" WidgetBottomRightX="0.485" WidgetBottomRightY="-0.166666666666667">
+          <img id="u16p000_img" class="img " src="images/zookeeper_____/u16p000.svg"/>
+        </div>
+        <div id="u16p001" class="ax_vector_shape" WidgetTopLeftX="-0.5" WidgetTopLeftY="0" WidgetTopRightX="0" WidgetTopRightY="0" WidgetBottomLeftX="-0.5" WidgetBottomLeftY="48.5" WidgetBottomRightX="0" WidgetBottomRightY="48.5">
+          <img id="u16p001_img" class="img " src="images/zookeeper_____/u16p001.svg"/>
+        </div>
+        <div id="u16p002" class="ax_vector_shape" WidgetTopLeftX="8.63636363636364" WidgetTopLeftY="-0.05" WidgetTopRightX="8.63636363636364" WidgetTopRightY="0" WidgetBottomLeftX="-0.181818181818182" WidgetBottomLeftY="-0.05" WidgetBottomRightX="-0.181818181818182" WidgetBottomRightY="0">
+          <img id="u16p002_img" class="img " src="images/zookeeper_____/u16p002.svg"/>
+        </div>
+        <div id="u16_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u17" class="compound ax_default line" data-height="1" data-width="176" CompoundMode="true">
+        <img id="u17_img" class="singleImg img " src="images/zookeeper_____/u17.svg"/>
+        <div id="u17p000" class="ax_vector_shape" WidgetTopLeftX="-0.483070457070248" WidgetTopLeftY="-0.0640253492877703" WidgetTopRightX="0.483953588551413" WidgetTopRightY="0.0619749436453745" WidgetBottomLeftX="-0.48309405852372" WidgetBottomLeftY="0.102639779787169" WidgetBottomRightX="0.483929987097942" WidgetBottomRightY="0.228640072720313">
+          <img id="u17p000_img" class="img " src="images/zookeeper_____/u17p000.svg"/>
+        </div>
+        <div id="u17p001" class="ax_vector_shape" WidgetTopLeftX="0.0559245117889731" WidgetTopLeftY="-0.283239154538947" WidgetTopRightX="43.4842443887314" WidgetTopRightY="6.78648733705634" WidgetBottomLeftX="0.0157556112685455" WidgetBottomLeftY="-0.0364873370563288" WidgetBottomRightX="43.444075488211" WidgetBottomRightY="7.03323915453896">
+          <img id="u17p001_img" class="img " src="images/zookeeper_____/u17p001.svg"/>
+        </div>
+        <div id="u17p002" class="ax_vector_shape" WidgetTopLeftX="7.17029324861437" WidgetTopLeftY="0.0558058302599712" WidgetTopRightX="-0.162972430683231" WidgetTopRightY="0.0214421140054782" WidgetBottomLeftX="7.17047222630319" WidgetBottomLeftY="0.0103517041486242" WidgetBottomRightX="-0.162793452994405" WidgetBottomRightY="-0.0240120121058689">
+          <img id="u17p002_img" class="img " src="images/zookeeper_____/u17p002.svg"/>
+        </div>
+        <div id="u17_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Line) -->
+      <div id="u18" class="compound ax_default line" data-height="1" data-width="377" CompoundMode="true">
+        <img id="u18_img" class="singleImg img " src="images/zookeeper_____/u18.svg"/>
+        <div id="u18p000" class="ax_vector_shape" WidgetTopLeftX="-0.489761138509451" WidgetTopLeftY="0.0503998253661791" WidgetTopRightX="0.486893943545111" WidgetTopRightY="-0.239396214112869" WidgetBottomLeftX="-0.489741224266966" WidgetBottomLeftY="0.150396870902797" WidgetBottomRightX="0.486913857787596" WidgetBottomRightY="-0.139399168576251">
+          <img id="u18p000_img" class="img " src="images/zookeeper_____/u18p000.svg"/>
+        </div>
+        <div id="u18p001" class="ax_vector_shape" WidgetTopLeftX="-0.266214500431943" WidgetTopLeftY="-0.0649096659192736" WidgetTopRightX="93.5404346471926" WidgetTopRightY="9.06608566287518" WidgetBottomLeftX="-0.290434647192654" WidgetBottomLeftY="0.183914337124818" WidgetBottomRightX="93.5162145004319" WidgetBottomRightY="9.31490966591927">
+          <img id="u18p001_img" class="img " src="images/zookeeper_____/u18p001.svg"/>
+        </div>
+        <div id="u18p002" class="ax_vector_shape" WidgetTopLeftX="15.5386174439942" WidgetTopLeftY="-0.0786960415915278" WidgetTopRightX="-0.169251792383381" WidgetTopRightY="0.0530294308989532" WidgetBottomLeftX="15.5382971565942" WidgetBottomLeftY="-0.124149244108172" WidgetBottomRightX="-0.169572079783338" WidgetBottomRightY="0.00757622838230855">
+          <img id="u18p002_img" class="img " src="images/zookeeper_____/u18p002.svg"/>
+        </div>
+        <div id="u18_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u19" class="compound ax_default line" data-height="254" data-width="1" CompoundMode="true">
+        <img id="u19_img" class="singleImg img " src="images/zookeeper_____/u19.svg"/>
+        <div id="u19p000" class="ax_vector_shape" WidgetTopLeftX="-0.488783334224201" WidgetTopLeftY="0.133306473920618" WidgetTopRightX="-0.488799252881218" WidgetTopRightY="-0.116691384809468" WidgetBottomLeftX="0.488131375274808" WidgetBottomLeftY="-0.129510553443654" WidgetBottomRightX="0.48811545661779" WidgetBottomRightY="-0.379508412173763">
+          <img id="u19p000_img" class="img " src="images/zookeeper_____/u19p000.svg"/>
+        </div>
+        <div id="u19p001" class="ax_vector_shape" WidgetTopLeftX="-0.194332593309529" WidgetTopLeftY="0.00921632778365507" WidgetTopRightX="-0.194520722892465" WidgetTopRightY="-0.0362378283490877" WidgetBottomLeftX="11.351023064406" WidgetBottomLeftY="-0.038568586282576" WidgetBottomRightX="11.3508349348231" WidgetBottomRightY="-0.0840227424153232">
+          <img id="u19p001_img" class="img " src="images/zookeeper_____/u19p001.svg"/>
+        </div>
+        <div id="u19p002" class="ax_vector_shape" WidgetTopLeftX="10.3856805429861" WidgetTopLeftY="-62.8113935369323" WidgetTopRightX="10.6320600484758" WidgetTopRightY="-62.7690008574384" WidgetBottomLeftX="-0.382060048475807" WidgetBottomLeftY="-0.230999142561615" WidgetBottomRightX="-0.135680542986108" WidgetBottomRightY="-0.188606463067686">
+          <img id="u19p002_img" class="img " src="images/zookeeper_____/u19p002.svg"/>
+        </div>
+        <div id="u19_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u20" class="compound ax_default line" data-height="248" data-width="1" CompoundMode="true">
+        <img id="u20_img" class="singleImg img " src="images/zookeeper_____/u20.svg"/>
+        <div id="u20p000" class="ax_vector_shape" WidgetTopLeftX="-0.480624643470538" WidgetTopLeftY="0.0958449664873979" WidgetTopRightX="-0.480654600598783" WidgetTopRightY="-0.00415204664301729" WidgetBottomLeftX="0.480586955612593" WidgetBottomLeftY="-0.0958327228725767" WidgetBottomRightX="0.480556998484348" WidgetBottomRightY="-0.195829736002992">
+          <img id="u20p000_img" class="img " src="images/zookeeper_____/u20p000.svg"/>
+        </div>
+        <div id="u20p001" class="ax_vector_shape" WidgetTopLeftX="-0.448546269992221" WidgetTopLeftY="-0.249749822880283" WidgetTopRightX="-0.198558090093229" WidgetTopRightY="-0.247318792074175" WidgetBottomLeftX="-1.05144190990677" WidgetBottomLeftY="61.7473187920742" WidgetBottomRightX="-0.801453730007779" WidgetBottomRightY="61.7497498228803">
+          <img id="u20p001_img" class="img " src="images/zookeeper_____/u20p001.svg"/>
+        </div>
+        <div id="u20p002" class="ax_vector_shape" WidgetTopLeftX="11.0901309742803" WidgetTopLeftY="-0.138760838061264" WidgetTopRightX="11.0904822896933" WidgetTopRightY="-0.0933076502747114" WidgetBottomLeftX="-0.182259596785531" WidgetBottomLeftY="-0.0516346156249103" WidgetBottomRightX="-0.181908281372482" WidgetBottomRightY="-0.00618142783835792">
+          <img id="u20p002_img" class="img " src="images/zookeeper_____/u20p002.svg"/>
+        </div>
+        <div id="u20_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u21" class="compound ax_default line" data-height="291" data-width="1" CompoundMode="true">
+        <img id="u21_img" class="singleImg img " src="images/zookeeper_____/u21.svg"/>
+        <div id="u21p000" class="ax_vector_shape" WidgetTopLeftX="-0.492989404573069" WidgetTopLeftY="0.205794853257315" WidgetTopRightX="-0.492993352954145" WidgetTopRightY="0.0391283004163755" WidgetBottomLeftX="0.490118032117045" WidgetBottomLeftY="0.149111894533918" WidgetBottomRightX="0.490114083735969" WidgetBottomRightY="-0.0175546583070224">
+          <img id="u21p000_img" class="img " src="images/zookeeper_____/u21p000.svg"/>
+        </div>
+        <div id="u21p001" class="ax_vector_shape" WidgetTopLeftX="-0.166035324673902" WidgetTopLeftY="0.0213227595132261" WidgetTopRightX="-0.166088448346559" WidgetTopRightY="-0.0286772063390558" WidgetBottomLeftX="13.0612283689749" WidgetBottomLeftY="0.00431787189620678" WidgetBottomRightX="13.0611752453023" WidgetBottomRightY="-0.0456820939560753">
+          <img id="u21p001_img" class="img " src="images/zookeeper_____/u21p001.svg"/>
+        </div>
+        <div id="u21p002" class="ax_vector_shape" WidgetTopLeftX="9.77151584110376" WidgetTopLeftY="-72.4191449145048" WidgetTopRightX="10.0191233528366" WidgetTopRightY="-72.384640999749" WidgetBottomLeftX="-0.26912335283663" WidgetBottomLeftY="-0.365359000251061" WidgetBottomRightX="-0.0215158411037919" WidgetBottomRightY="-0.330855085495244">
+          <img id="u21p002_img" class="img " src="images/zookeeper_____/u21p002.svg"/>
+        </div>
+        <div id="u21_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u22" class="compound ax_default line" data-height="290" data-width="1" CompoundMode="true">
+        <img id="u22_img" class="singleImg img " src="images/zookeeper_____/u22.svg"/>
+        <div id="u22p000" class="ax_vector_shape" WidgetTopLeftX="-0.489867544937712" WidgetTopLeftY="-0.106869309009577" WidgetTopRightX="-0.489852605260052" WidgetTopRightY="-0.273534346054722" WidgetBottomLeftX="0.489852605260052" WidgetBottomLeftY="0.106867679388074" WidgetBottomRightX="0.489867544937712" WidgetBottomRightY="-0.0597973576570704">
+          <img id="u22p000_img" class="img " src="images/zookeeper_____/u22p000.svg"/>
+        </div>
+        <div id="u22p001" class="ax_vector_shape" WidgetTopLeftX="-0.339696036485634" WidgetTopLeftY="-0.000198325390712739" WidgetTopRightX="-0.0896984809179173" WidgetTopRightY="0.000907210756167842" WidgetBottomLeftX="-0.660301519082111" WidgetBottomLeftY="72.4990927892438" WidgetBottomRightX="-0.410303963514394" WidgetBottomRightY="72.5001983253907">
+          <img id="u22p001_img" class="img " src="images/zookeeper_____/u22p001.svg"/>
+        </div>
+        <div id="u22p002" class="ax_vector_shape" WidgetTopLeftX="11.9166997208985" WidgetTopLeftY="0.0320607927028723" WidgetTopRightX="11.916515464874" WidgetTopRightY="0.0820603038164157" WidgetBottomLeftX="-0.166515464873972" WidgetBottomLeftY="-0.0320603038164222" WidgetBottomRightX="-0.16669972089845" WidgetBottomRightY="0.0179392072971211">
+          <img id="u22p002_img" class="img " src="images/zookeeper_____/u22p002.svg"/>
+        </div>
+        <div id="u22_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u23" class="ax_default button">
+        <div id="u23_div" class=""></div>
+        <div id="u23_text" class="text ">
+          <p><span>x=1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u24" class="ax_default button">
+        <div id="u24_div" class=""></div>
+        <div id="u24_text" class="text ">
+          <p><span>x=1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u25" class="ax_default button">
+        <div id="u25_div" class=""></div>
+        <div id="u25_text" class="text ">
+          <p><span>x=0</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u26" class="compound ax_default line" data-height="191" data-width="1" CompoundMode="true">
+        <img id="u26_img" class="singleImg img " src="images/zookeeper_____/u26.svg"/>
+        <div id="u26p000" class="ax_vector_shape" WidgetTopLeftX="-0.489554356529738" WidgetTopLeftY="0.220057401756838" WidgetTopRightX="-0.489569244408723" WidgetTopRightY="0.0533914446638294" WidgetBottomLeftX="0.484931290554926" WidgetBottomLeftY="0.127166962142779" WidgetBottomRightX="0.484916402675941" WidgetBottomRightY="-0.0394989949502289">
+          <img id="u26p000_img" class="img " src="images/zookeeper_____/u26p000.svg"/>
+        </div>
+        <div id="u26p001" class="ax_vector_shape" WidgetTopLeftX="-0.167847793461566" WidgetTopLeftY="0.0125172256544857" WidgetTopRightX="-0.167980430928888" WidgetTopRightY="-0.0329371262799713" WidgetBottomLeftX="8.51393342601999" WidgetBottomLeftY="-0.012816530603894" WidgetBottomRightX="8.51380078855266" WidgetBottomRightY="-0.0582708825383508">
+          <img id="u26p001_img" class="img " src="images/zookeeper_____/u26p001.svg"/>
+        </div>
+        <div id="u26p002" class="ax_vector_shape" WidgetTopLeftX="3.76187617901735" WidgetTopLeftY="-47.6756501651753" WidgetTopRightX="4.01098737387341" WidgetTopRightY="-47.6545880523329" WidgetBottomLeftX="-0.260987373873462" WidgetBottomLeftY="-0.0954119476671167" WidgetBottomRightX="-0.0118761790174062" WidgetBottomRightY="-0.0743498348247726">
+          <img id="u26p002_img" class="img " src="images/zookeeper_____/u26p002.svg"/>
+        </div>
+        <div id="u26_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Vertical Line) -->
+      <div id="u27" class="compound ax_default line" data-height="191" data-width="1" CompoundMode="true">
+        <img id="u27_img" class="singleImg img " src="images/zookeeper_____/u27.svg"/>
+        <div id="u27p000" class="ax_vector_shape" WidgetTopLeftX="-0.484705666371608" WidgetTopLeftY="0.118659494851094" WidgetTopRightX="-0.48474416520988" WidgetTopRightY="-0.0480024268580618" WidgetBottomLeftX="0.489756386070692" WidgetBottomLeftY="-0.121547590074237" WidgetBottomRightX="0.48971788723242" WidgetBottomRightY="-0.288209511783392">
+          <img id="u27p000_img" class="img " src="images/zookeeper_____/u27p000.svg"/>
+        </div>
+        <div id="u27p001" class="ax_vector_shape" WidgetTopLeftX="-0.263457399346322" WidgetTopLeftY="-6.66647915181784E-05" WidgetTopRightX="-0.0134696689381997" WidgetTopRightY="0.00241015684049728" WidgetBottomLeftX="-0.736530331061772" WidgetBottomLeftY="47.7475898431595" WidgetBottomRightX="-0.48654260065365" WidgetBottomRightY="47.7500666647915">
+          <img id="u27p001_img" class="img " src="images/zookeeper_____/u27p001.svg"/>
+        </div>
+        <div id="u27p002" class="ax_vector_shape" WidgetTopLeftX="8.50026140771183" WidgetTopLeftY="-0.0598968484627396" WidgetTopRightX="8.50060439736189" WidgetTopRightY="-0.0144435970875154" WidgetBottomLeftX="-0.181309604955929" WidgetBottomLeftY="0.00561417469871516" WidgetBottomRightX="-0.180966615305869" WidgetBottomRightY="0.0510674260739394">
+          <img id="u27p002_img" class="img " src="images/zookeeper_____/u27p002.svg"/>
+        </div>
+        <div id="u27_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u28" class="ax_default button">
+        <div id="u28_div" class=""></div>
+        <div id="u28_text" class="text ">
+          <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">连接失败，因为</span><span style="font-family:'ArialMT', 'Arial', sans-serif;">follower</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">的</span><span style="font-family:'ArialMT', 'Arial', sans-serif;">zxid</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">小于客户端</span><span style="font-family:'ArialMT', 'Arial', sans-serif;">zxid</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u29" class="ax_default label">
+        <div id="u29_div" class=""></div>
+        <div id="u29_text" class="text ">
+          <p><span>同步副本</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u30" class="ax_default label">
+        <div id="u30_div" class=""></div>
+        <div id="u30_text" class="text ">
+          <p><span>同步副本</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Ellipse) -->
+      <div id="u31" class="ax_default ellipse">
+        <img id="u31_img" class="img " src="images/zookeeper_____/u31.svg"/>
+        <div id="u31_text" class="text ">
+          <p><span>1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u32" class="ax_default ellipse">
+        <img id="u32_img" class="img " src="images/zookeeper_____/u32.svg"/>
+        <div id="u32_text" class="text ">
+          <p><span>2</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Ellipse) -->
+      <div id="u33" class="ax_default ellipse">
+        <img id="u33_img" class="img " src="images/zookeeper_____/u31.svg"/>
+        <div id="u33_text" class="text ">
+          <p><span>3</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Ellipse) -->
+      <div id="u34" class="ax_default ellipse">
+        <img id="u34_img" class="img " src="images/zookeeper_____/u31.svg"/>
+        <div id="u34_text" class="text ">
+          <p><span>4</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
